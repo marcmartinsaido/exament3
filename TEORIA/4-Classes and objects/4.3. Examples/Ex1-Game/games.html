@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+  </head>
+  <body>
+    <h1>Lista de juegos</h1>
+
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Título</th>
+		      <th scope="col">Desarrollador</th>
+		      <th scope="col">Pegi</th>
+		    </tr>
+		  </thead>
+		  <tbody id="content-games">
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>Halo</td>
+		      <td>Active Design</td>
+		      <td>18</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">2</th>
+		      <td>Jacob</td>
+		      <td>Thornton</td>
+		      <td>@fat</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">3</th>
+		      <td>Larry</td>
+		      <td>the Bird</td>
+		      <td>@twitter</td>
+		    </tr>
+		  </tbody>
+		</table>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/main-games.js"></script>
+	<script type="text/javascript">
+
+		let juego1 = new Game(1, "Star Wars Jedi: Fallen Order", "Five Start Studio", "12/12/2019", "Action", "16");
+		let juego2 = new Game(2, "Terminator", "Marvel Studio", "12/12/2019", "Adventure", "12");
+		let juego3 = new Game(3, "Halo", "Pixel Studio", "12/12/2019", "Rol", "18"); 
+		let juego4 = new Game(4, "Fifa 2020", "Electronics", "1/01/2020", "Sports", "3");
+		
+		let listGames = [];
+		listGames.push(juego1);
+		listGames.push( juego2);
+		listGames.push(juego3);
+		listGames.push( juego4);
+
+		printTableGames(listGames);
+
+	</script>
+  </body>
+</html>

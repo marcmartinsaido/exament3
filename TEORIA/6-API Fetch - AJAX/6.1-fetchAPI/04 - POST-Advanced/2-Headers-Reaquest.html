@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="info"></div>
+    <script>
+        // La función "fetch" solo hace un "reject" cuando exista un error en la red. 
+        // Si el servidor está trabajando de manera correcta nos responderá la petición realizada, 
+        // así sea con un status 400 o 500 y fetch lo tomará como promise resolve. 
+
+        // Construcción completa de un objeto request.
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let requestData = {
+            headers,
+            method: 'POST',
+            body: '{"foo":"bar"}'
+        }
+        let URL = 'http://webapi.com';
+        const request = new Request(URL, requestData);
+
+        /*
+        Ahora veamos como manejar los errores para ello es necesario recordar que fetch regresa un objeto del 
+        tipo Response. Response tiene varias propiedades y nosotros utilizaremos dos propiedades 
+        Response.ok y Response.status.
+
+        La manera fácil y rápida de hacer esto es utilizar la propiedad Response.ok esta propiedad es de solo 
+        lectura y será true solo en los status del rango 200-299, 
+        así nuestro código quedará de la siguiente manera:
+        */
+
+        fetch(request)
+            .then(response => {
+                if (!response.ok) throw Error(response.status);
+                return response;
+            })
+            .then(response => console.log("ok"))
+            .catch(error => console.log(error));
+
+        /*
+            En EL catch decidimos que hacer con el error, aquí recibimos response.status
+            Dentro de throw Error(…) podemos regresar statusText o status, status es el número del 
+            código de error(200, 404, 500 etc),
+            y statusText nos regresa el nombre asociado al código de error.
+        */
+       /*
+            // Utlización de resquest y response
+            https://developer.mozilla.org/es/docs/Web/API/Request
+            https://developer.mozilla.org/es/docs/Web/API/Response
+            
+       */
+    </script>
+</body>
+
+</html>

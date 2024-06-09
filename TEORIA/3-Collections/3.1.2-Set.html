@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*************************************************/
+		// Set: Aquest tipus de llista no permet elements repetits
+		/*************************************************/
+		function showRoles(value) {
+			console.log("Nom rol de la llista tipus set:" + value.name);
+		}
+		var rolesSet = new Set();
+		rolesSet.add({ "id": 'r1', "name": 'User' });
+        rolesSet.add({ "id": 'r2', "name": 'Admin' });
+        // No te efecte peruqè ja existeix i no l'afegeix
+		rolesSet.add({ "id": 'r2', "name": 'Admin' });
+		rolesSet.forEach(showRoles);
+
+		// Iterar amb un objecte iterator:
+		var setNoticies = new Set(noticiesObjects);
+		var iterator = setNoticies.values();
+		console.log(iterator.next());
+    </script>
+</body>
+</html>

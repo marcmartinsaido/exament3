@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+
+		/*------------------------------------------
+		* DEFINICIÓN DIRECTA DE OBJETOS
+		*--------------------------------------------*/
+		const cliente = {
+			nombre: "Juan",
+			saldo: 3000,
+			tipoCliente: function () {
+				let tipo;
+				if (this.saldo > 1000) {
+
+				} else if (this.saldi > 500) {
+					tipo = "Platinum";
+				} else {
+					tipo = "normal";
+				}
+				return tipo;
+			}
+		};
+
+		let bookObj = {
+			"ISBN": "8978768768",
+			"title": "Harry Potter",
+			"release": 2010,
+			"sypnosis": "Descripció llibre",
+			"price": 30,
+			presentationBook: function () {
+				return "The title of book is " + this.title;
+			}
+		};
+		//
+		console.log("Datos objecto:" + bookObj.title);
+		console.log("Datos objecto:" + bookObj.presentationBook());
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

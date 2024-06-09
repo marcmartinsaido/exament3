@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        /****************************************************************/
+        // Definició d'una llista d'objectes tipus MAP (clau, valor)
+        /****************************************************************/
+        var noticiesMap = new Map();
+        noticiesMap.set("not1", 'Brexit');
+        noticiesMap.set(80, 'Time');
+        noticiesMap.set(50, 'Generation');
+
+        // Accedir al valor a partir de la clau mitjançant funció get(key)
+        console.log("títol:" + noticiesMap.get("not1"));
+        // Comprovar si exiteix una determinada clau
+        console.log("Existeix clau 1:" + noticiesMap.has(80));
+
+        // Inicialització amb un array
+        var roles = new Map([
+            ['r1', 'User'],
+            ['r2', 'Guest'],
+            ['r3', 'Admin'],
+        ]);
+
+        // Exemple d'un MAP per a representar l'inventari d'un personatge
+        let inventory = new Map();
+        inventory.set("weapons", ["sword", "axe", "knife"]);
+        inventory.set("potions", ["life", "magic", "poison"]);
+        inventory.set("armor", ["helmet", "shield", "breastplate"]);
+
+        // Formes de llegir un MAP
+        /* a partir de l'array d'entrades que torna el mètode entries()
+          una entrada és el parell format per [key, value] on value pot ser
+            una cadena de text, un altre array o fins i to un objecte
+        */
+        for (let rol of roles.entries()) {
+            console.log(`${rol[0]}: ${rol[1]}`);
+        }
+
+        // A partir d'un foreach i execució d'una funció callback (inline callback)
+        function mostraDadesRoles(key, value) {
+            console.log("Mostrar clau y valor:" + key + "=" + value);
+        }
+        roles.forEach(mostraDadesRoles);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

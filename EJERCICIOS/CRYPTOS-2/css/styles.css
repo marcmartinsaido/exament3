@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    padding: 3% 10%;
+}
+main{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1rem 1fr 1fr 1fr;
+    gap:1rem;
+
+    width: 80%;
+}
+
+main div{
+    padding: 5px;
+    color:white;
+    background-color: rgb(80, 78, 78);
+
+}
+main div img{
+    width: 16px;
+}
+.green{
+    color:rgb(166, 244, 166);
+}
+.red{
+    color:red;
+    font-weight: bold;
+}

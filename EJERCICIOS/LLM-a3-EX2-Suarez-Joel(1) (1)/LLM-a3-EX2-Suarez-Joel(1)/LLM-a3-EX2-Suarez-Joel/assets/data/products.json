@@ -1,0 +1,123 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "A Prenda 1",
+        "imagen": "./assets/images/productes/capell04.jpg",
+        "descripcion": "Descripcion hombre",
+        "precio": 150,
+        "putuacion":1,
+        "discount": 50,
+        "category": "Hombre"
+      },
+      {
+        "id": 2,
+        "nombre": " B Prenda 2",
+        "imagen": "./assets/images/productes/clothes01.jpg",
+        "descripcion": "Descripcion hombre",
+        "precio": 60,
+        "putuacion":5,
+        "discount": 25,
+        "categoria": "Hombre"
+      },
+      {
+        "id": 3,
+        "nombre": " C Prenda 3",
+        "imagen": "./assets/images/productes/clothes02.jpg",
+        "descripcion": "Descripcion mujer",
+        "precio": 65,
+        "putuacion":3,
+        "discount": 60,
+        "category": "Mujer"
+      },
+      {
+        "id": 4,
+        "nombre": " D Prenda 4",
+        "imagen": "./assets/images/productes/clothes03.jpg",
+        "descripcion": "Descripcion hombre",
+        "precio": 30,
+        "putuacion":2,
+        "discount": 0,
+        "categoria": "Hombre"
+      },
+      {
+        "id": 5,
+        "nombre": " E Prenda 5",
+        "imagen": "./assets/images/productes/clothes04.jpg",
+        "descripcion": "Descripcion mujer",
+        "precio": 50,
+        "putuacion":1,
+        "discount": 30,
+        "categoria": "Mujer"
+      },
+      {
+        "id": 6,
+        "nombre": " F Prenda 6",
+        "imagen": "./assets/images/productes/jewellery03.jpg",
+        "descripcion": "Descripcion accesorios",
+        "precio": 25,
+        "putuacion":1,
+        "discount": 0,
+        "categoria": "Accesorios"
+      },
+      {
+        "id": 7,
+        "nombre": " G Prenda 7",
+        "imagen": "./assets/images/productes/jewellery02.jpg",
+        "descripcion": "Descripcion accesorios",
+        "precio": 35,
+        "putuacion":4,
+        "discount": 30,
+        "categoria": "Accesorios"
+      },
+      {
+        "id": 8,
+        "nombre":  " H Prenda 8",
+        "imagen": "./assets/images/productes/jacket03.jpg",
+        "descripcion": "Descripcion hombre",
+        "precio": 60,
+        "putuacion":5,
+        "discount": 50,
+        "categoria": "Hombre"
+      },
+      {
+        "id": 9,
+        "nombre":  " I Prenda 9",
+        "imagen": "./assets/images/productes/jacket04.jpg",
+        "descripcion": "Descripcion hombre",
+        "precio": 50,
+        "putuacion":2,
+        "discount": 30,
+        "categoria": "Hombre"
+      },
+      {
+        "id": 10,
+        "nombre":  " J Prenda 10",
+        "imagen": "./assets/images/productes/jewellery01.jpg",
+        "descripcion": "Descripcion Accesorios",
+        "precio": 80,
+        "putuacion":3,
+        "discount": 50,
+        "categoria": "Accesorios"
+      },
+      {
+        "id": 11,
+        "nombre":  " K Prenda 11",
+        "imagen": "./assets/images/productes/jacket06.jpg",
+        "descripcion": "Descripcion mujer",
+        "precio": 64,
+        "putuacion":3,
+        "discount": 30,
+        "categoria": "Mujer"
+      },
+      {
+        "id": 12,
+        "nombre":  " L Prenda 12",
+        "imagen": "./assets/images/productes/shoe01.jpg",
+        "descripcion": "Descripcion mujer",
+        "precio": 17,
+        "putuacion":1,
+        "discount": 0,
+        "categoria": "Mujer"
+      }
+]

@@ -1,0 +1,37 @@
+-El json del examen será: 1 punto para el examen
+
+nombre
+id
+estrellas (función estrellas)
+descripción
+departamento
+descuento (función descuento con su posible css)
+
+
+-Alomejor el punto complicado del examen es otro json:
+tipo de producto es un id con 2 json uno de los productos y otro con el tipo de producto
+
+-Hay que saber hacer el json para saber hacer el examen.
+Porque si no no extraerás nada
+
+-Pueden pasar 2 cosas o que el json que hagamos será el que utilize en el examen o nos dará una API.
+
+-9 preguntas 1 es que funcione todo, el ultimo punto. hay 4 que valen 1,25.
+
+-Si pregunta APIs serán preguntas teóricas, de como te pondrías la API. 
+
+
+POSIBLES PUNTOS PARA EL EXAMEN
+1 Hacer el json
+1,25 Función Fetch(con su try catch correcto)
+1,25 Función Cargar datos
+1,25 Función Renderizar/Pintar datos
+1,25 Función local storage
+1,25 Función filtrar/buscar
+1,25 Función Destacar
+1,25 Función Estilos
+1,25 Función Botones
+
+
+
+

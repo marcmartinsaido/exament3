@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+
+
+		//GET (Leer datos)
+	/*	fetch('./data/usuaris.json')
+		.then(function(response) {
+			alert(response)
+		  return response.json();
+		})
+		.then(function(response) {
+		  console.log(response)
+		});*/
+
+		fetch('./data/usuaris.json')
+		.then(res => res.json())
+		.then(data => {
+			let contenedor = document.getElementById("datos");
+			for (element of data.users){
+				alert(element.name);
+			}
+			//contenedor.innerHTML =
+			console.log(data);
+
+		});
+
+
+/*
+// POST (Crear nuevos datos)
+fetch('http://ejemplo.com/api/user', {
+  headers: {
+    'Content-type': 'application/json'
+  },
+  method: 'POST',
+  body: { name: 'Paquito Chocolatero', age: 31 },
+  }).then(function(data) {
+    console.log(data);
+  });
+
+// PUT (Actualizar)
+fetch('http://ejemplo.com/api/user/1/age', {
+  headers: {
+    'Content-type': 'application/json'
+  },
+  method: 'PUT',
+  body: 32,
+  })
+  .then(function(data) {
+    console.log(data);
+  });
+;
+
+// DELETE (Borrar)
+fetch('http://ejemplo.com/api/user/1', {
+  method: 'DELETE',
+  })
+  .then(function(data) {
+    console.log(data);
+  });
+;
+*/
+		</script>
+	</head>
+	<body>
+
+		<div id="datos" class="">
+
+		</div>
+
+	</body>
+</html>

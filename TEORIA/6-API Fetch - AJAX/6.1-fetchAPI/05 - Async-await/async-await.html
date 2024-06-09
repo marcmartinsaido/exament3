@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function leerTodos(){
+            const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos');
+            const datos = await respuesta.json();
+
+            const respuesta2 = await fetch('https://jsonplaceholder.typicode.com/todos');
+            const datos2 = await respuesta2.json();
+
+            return datos;
+        }
+
+        leerTodos().then(
+            usuarios => console.log(usuarios)
+        );
+
+    </script>
+</body>
+</html>

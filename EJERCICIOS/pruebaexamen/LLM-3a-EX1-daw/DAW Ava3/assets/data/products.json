@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Zoom",
+    "image": "./assets/images/products/1.jpg",
+    "description": "Running shoes with responsive cushioning",
+    "price": 150,
+    "discount": 50,
+    "brand": "Nike"
+  },
+  {
+    "id": 2,
+    "name": "Reebok Classic",
+    "image": "./assets/images/products/2.jpg",
+    "description": "Classic leather sneakers",
+    "price": 100,
+    "discount": 0,
+    "brand": "Reebok"
+  },
+  {
+    "id": 3,
+    "name": "Adidas Ultraboost",
+    "image": "./assets/images/products/3.jpg",
+    "description": "High-performance running shoes",
+    "price": 180,
+    "discount": 25,
+    "brand": "Adidas"
+  },
+  {
+    "id": 4,
+    "name": "Puma Suede",
+    "image": "./assets/images/products/4.jpg",
+    "description": "Iconic streetwear sneakers",
+    "price": 80,
+    "discount": 0,
+    "brand": "Puma"
+  },
+  {
+    "id": 5,
+    "name": "Nike Air Max",
+    "image": "./assets/images/products/sports-3.jpg",
+    "description": "Comfortable everyday shoes",
+    "price": 120,
+    "discount": 50,
+    "brand": "Nike"
+  },
+  {
+    "id": 6,
+    "name": "Reebok Nano",
+    "image": "./assets/images/products/sports-4.jpg",
+    "description": "Crossfit and training shoes",
+    "price": 130,
+    "discount": 0,
+    "brand": "Reebok"
+  },
+  {
+    "id": 7,
+    "name": "Adidas Superstar",
+    "image": "./assets/images/products/sports-5.jpg",
+    "description": "Timeless sneaker design",
+    "price": 90,
+    "discount": 0,
+    "brand": "Adidas"
+  },
+  {
+    "id": 8,
+    "name": "Puma RS-X",
+    "image": "./assets/images/products/shoe-1.jpg",
+    "description": "Retro-inspired sneakers",
+    "price": 110,
+    "discount": 0,
+    "brand": "Puma"
+  },
+  {
+    "id": 9,
+    "name": "Nike Free Run",
+    "image": "./assets/images/products/shoe-2.jpg",
+    "description": "Minimalist running shoes",
+    "price": 140,
+    "discount": 25,
+    "brand": "Nike"
+  },
+  {
+    "id": 10,
+    "name": "Reebok Pump",
+    "image": "./assets/images/products/1.jpg",
+    "description": "Iconic pump technology shoes",
+    "price": 160,
+    "discount": 50,
+    "brand": "Reebok"
+  },
+  {
+    "id": 11,
+    "name": "Adidas NMD",
+    "image": "./assets/images/products/2.jpg",
+    "description": "Modern streetwear sneakers",
+    "price": 170,
+    "discount": 0,
+    "brand": "Adidas"
+  },
+  {
+    "id": 12,
+    "name": "Puma Cali",
+    "image": "./assets/images/products/3.jpg",
+    "description": "Californian style shoes",
+    "price": 95,
+    "discount": 0,
+    "brand": "Puma"
+  }
+]

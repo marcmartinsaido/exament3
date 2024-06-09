@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Collections</title>
+	<script type="text/javascript">
+		
+		/*************************************************/
+		// Tipus d'objectes
+		/*************************************************/
+		// array
+		let client = ["1", "Josep", "921387979"];
+
+		// Objecte JSON
+		let clientJSON = {
+			"id": 1,
+			"nom": "Josep",
+			"tel": "921387979"
+		};
+
+		// Objecte Javascript
+		let clientObj = {
+			id: 1,
+			nom: "Josep",
+			tel: "921387979"
+		};
+
+		//Destructuring per obternir les dades en variables des de l'estructura (ve de phyton)
+		var [idClient, nomClient] = client;
+
+		console.log("dades client:", idClient, nomClient);
+
+		var { id, nom } = clientObj;
+		console.log("dades client obj:", id, nom);
+
+		// Iterar sobre els noms de les propietats:
+		for (let atribut of Object.keys(clientObj)) {
+			var valor = clientObj[atribut];
+			console.log(clientObj, valor);
+		}
+
+		for (const [atribut, valor] of Object.entries(clientObj))
+			console.log(atribut, valor);
+
+
+		// Array bidimensional
+		let noticiesArray = [
+			[1, "Brexit", "The end of the society..."],
+			[2, "Time", "The climate change..."],
+			[3, "Next generation", "Google is developing new generation..."]
+		];
+
+		// Exemples d'accés amb index i,j
+		//alert(noticiesArray[2][1]); // Resultat: Next generation
+
+		for (let element of noticiesArray) {
+			console.log("News:" + element[1]);// mostra el títol de la notícia
+		}
+
+		// Array d'objectes
+		let noticiesObjects = [
+			{ "id": 1, "title": "Brexit", "description": "The end of the society..." },
+			{ "id": 2, "title": "Time", "description": "The end of the society..." },
+			{ "id": 3, "title": "Next Generation", "description": "The end of the society..." }
+		];
+
+		for (let element of noticiesObjects) {
+			console.log("Noticies object:" + element.title);
+		}
+
+		// Iterar sobre els atributs d'un objecte:
+		var person = { "name": "John", "surname": "Doe", "age": 25 };
+		for (var atribut in person) {
+			console.log(atribut + ":" + person[atribut]);
+		}
+
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

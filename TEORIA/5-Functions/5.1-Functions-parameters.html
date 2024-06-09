@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Variables per referència i per valor</title>
+	<script type="text/javascript">
+
+		// Pas de paràmetres per valor
+		/****************************************************************************/
+
+		// Calcula el preu final amb el 21% de iva
+		function calculaPreuFinal(preu) {
+			preu += preu * 0.21;
+			return preu;
+		}
+
+		let preuProducte = 5;
+		// Executam funció               '5'
+		let preuFinal = calculaPreuFinal(preuProducte);
+
+		// Els paràmetres es pasen per valor
+		console.log("Variable preu:" + preuProducte);
+		console.log("Variable preuFinal:" + preuFinal);
+		console.log("Pas per valor directament:" + calculaPreuFinal(30));
+
+		// Pas de paràmetres per referència
+		// Els objectes per defecte es pasen per referència
+		/****************************************************************************/
+
+		/*
+		* Declaració de la variable 'car' com a objecte
+		* Es crea i inicialitza el nou objete
+		* per fer referència a ell mitjanánt 'oCar'
+		*/
+		let oCar = {
+			marca: "Honda",
+			model: "Accord",
+			any: 2004
+		};
+
+		/* Declaració de la funció */
+		function modificaMarca(car) {
+			car.marca = "Toyota";
+		}
+
+		// Execució de la funció. L'objecte es passa per referència.
+		modificaMarca(oCar);
+
+		// l'Objecte oCar s'ha modificat encara que estigui fora de lafunció
+		console.log("Objecte oCar modificat:" + oCar.marca);
+
+
+		/* Això seria incorrecte!!! la variable és local i no es troba disponible en
+		aquest punt d'execució  */
+	//alert(car.marca);
+
+	</script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

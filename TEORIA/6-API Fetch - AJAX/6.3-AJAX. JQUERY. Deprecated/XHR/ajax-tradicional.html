@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function ajax(){
+        const http = new XMLHttpRequest();
+        const url = 'servidor.php';
+
+        http.onreadystatechange = function(){
+          if(this.readyState == 4 && this.status == 200){
+            console.log(this.responseText);
+          }else if(this.status==400){
+            console.log("Error de carga");
+          }
+          http.open("POST", url);
+          http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          http.send("a=3&b=8");
+        }
+
+        document.getElementById("boton").addEventListerner("click"), function(){
+            ajax();
+        });
+
+
+
+      });
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

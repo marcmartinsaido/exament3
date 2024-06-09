@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<style media="screen">
+				h1{
+					padding-top: 15px;
+				}
+				body{
+					margin:1% 10%;
+				}
+		</style>
+    <title>Inicial</title>
+  </head>
+  <body>
+		<div id="list-films"></div>
+		<div id="list-series"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+		<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+
+			//  Carrega de dades json
+			function getJSONVideos(){
+				// Petició ajax de les dades
+			  $.getJSON('data/video.json', function(data) {
+			    jsonVideos = data.video;
+			    printFilms(jsonVideos.films);
+			    printSeries(jsonVideos.series);
+			  });
+			}
+
+			//  Mostra les pel·lícules (fa servir jquery)
+			function printFilms(listFilms){
+			    $('#list-films').html("<h1>Pel·lícules disponibles</h1>");
+			    $.each( listFilms, function( key, val){
+			      let oFilm = val;
+			      console.log("info:"+oFilm.id + " "+ oFilm.name);
+			      let card = `<div>
+													<hr/>
+													<h5 class="card-title">${oFilm.name}</h5>
+									     		<p class="card-text">${oFilm.sinopsis}</p>
+											 </div>
+											 `;
+			      $('#list-films').append(card);
+			    });
+			}
+
+			// Mostra les series (fa servir només javascript)
+			function printSeries(listSeries){
+					document.querySelector("#list-series").innerHTML="<h1>Sèries disponibles</h1>";
+					listSeries.forEach(function(element){
+						let oSerie = element;
+						console.log("info serie:"+oSerie.id + " "+ oSerie.name);
+						let card = `<div>
+													<hr/>
+													<h5 class="card-title">${oSerie.name}</h5>
+													<p class="card-text">${oSerie.genre}</p>
+											 </div>
+											 `;
+						document.querySelector("#list-series").innerHTML+=card;
+					});
+			}
+
+			/* Equival a window.onload */
+			$(document).ready(function() {
+					getJSONVideos();
+
+			});
+
+			
+		</script>
+  </body>
+</html>

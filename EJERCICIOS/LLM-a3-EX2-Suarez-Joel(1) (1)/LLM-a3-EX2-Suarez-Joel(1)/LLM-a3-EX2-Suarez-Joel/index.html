@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> eCommerce Website</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="./assets/js/app.js"></script>
+</head>
+
+<body>
+
+  <div id="page">
+    <!-- Top information and language *************************-->
+    <section class="top-info">
+      <div class="header-social-container">
+        <a href="#" class="social-link">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="shipping-text">
+        Free Shipping This Week Order Over 55€
+      </div>
+      <div>
+        <select>
+          <option value="en" selected>English</option>
+          <option value="es">Spanish</option>
+          <option value="ca">Catalan</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Header *************************-->
+    <header>
+      <section class="top-header">
+        <div class="logo-container">
+          <!-- <img src="./assets/images/logo/dress.svg" class="logo" alt="" /> -->
+          <h1>DRESS</h1>
+        </div>
+        <div class="search-container">
+          <input type="text" name="search" placeholder="Enter your product name..." />
+	        <button class="icon-button search-btn">
+	            <i class="fa-solid fa-magnifying-glass"></i>
+	        </button>
+        </div>
+        <div class="icons-container">
+	        <button class="icon-button">
+	            <svg onclick="changeView(4)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+	                <path fill="currentColor" d="M192 176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144C170.5 32 192 53.49 192 80V176zM192 432C192 458.5 170.5 480 144 480H48C21.49 480 0 458.5 0 432V336C0 309.5 21.49 288 48 288H144C170.5 288 192 309.5 192 336V432zM256 80C256 53.49 277.5 32 304 32H400C426.5 32 448 53.49 448 80V176C448 202.5 426.5 224 400 224H304C277.5 224 256 202.5 256 176V80zM448 432C448 458.5 426.5 480 400 480H304C277.5 480 256 458.5 256 432V336C256 309.5 277.5 288 304 288H400C426.5 288 448 309.5 448 336V432z"></path>
+	            </svg>
+	        </button>
+	        <button class="icon-button">
+	            <svg onclick="changeView(6)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+	                <path fill="currentColor" d="M0 72C0 49.91 17.91 32 40 32H88C110.1 32 128 49.91 128 72V120C128 142.1 110.1 160 88 160H40C17.91 160 0 142.1 0 120V72zM0 232C0 209.9 17.91 192 40 192H88C110.1 192 128 209.9 128 232V280C128 302.1 110.1 320 88 320H40C17.91 320 0 302.1 0 280V232zM128 440C128 462.1 110.1 480 88 480H40C17.91 480 0 462.1 0 440V392C0 369.9 17.91 352 40 352H88C110.1 352 128 369.9 128 392V440zM160 72C160 49.91 177.9 32 200 32H248C270.1 32 288 49.91 288 72V120C288 142.1 270.1 160 248 160H200C177.9 160 160 142.1 160 120V72zM288 280C288 302.1 270.1 320 248 320H200C177.9 320 160 302.1 160 280V232C160 209.9 177.9 192 200 192H248C270.1 192 288 209.9 288 232V280zM160 392C160 369.9 177.9 352 200 352H248C270.1 352 288 369.9 288 392V440C288 462.1 270.1 480 248 480H200C177.9 480 160 462.1 160 440V392zM448 120C448 142.1 430.1 160 408 160H360C337.9 160 320 142.1 320 120V72C320 49.91 337.9 32 360 32H408C430.1 32 448 49.91 448 72V120zM320 232C320 209.9 337.9 192 360 192H408C430.1 192 448 209.9 448 232V280C448 302.1 430.1 320 408 320H360C337.9 320 320 302.1 320 280V232zM448 440C448 462.1 430.1 480 408 480H360C337.9 480 320 462.1 320 440V392C320 369.9 337.9 352 360 352H408C430.1 352 448 369.9 448 392V440z"></path>
+	            </svg>
+	        </button>
+	        <button class="icon-button">
+	            <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+	        </button>
+        </div>
+      </section>
+      <nav class="main-nav">
+        <a href="#" data-categoria="Hombre">Men's</a>
+        <a href="#" data-categoria="Mujer">Women's</a>
+        <a href="#" data-categoria="Accesorios">Jewelry</a>
+      </nav>
+    </header>
+
+    <!-- Main page *************************-->
+    <main>
+      <!-- Banner -->
+      <section class="hero">
+        <h3>Trending item</h3>
+        <h2>Women's <br />latest fashion sale</h2>
+        <h4>starting at <span class="number">20</span>.00&euro;</h4>
+        <button>SHOP NOW</button>
+      </section>
+
+      <h2>New Products</h2>
+      <!-- Grid -->
+      <section class="product-grid-4">
+        <!-- <article class="card">
+          <div class="offer">50%</div>
+          <div class="info-1">
+            <img src="./assets/images/productes/jacket03.jpg" alt="">
+            <h3>jacket</h3>
+            <h4>Mens Winter Leathers Jackets</h4>
+          </div>
+          <div class="info2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star grey-star"></i>
+              <i class="fa-solid fa-star grey-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">48.00 &euro; <del>96.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/shirt01.jpg" alt="">
+            <h3>Shirt</h3>
+            <h4>Pure Garment Dyed Cotton Shirt</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star grey-star"></i>
+              <i class="fa-solid fa-star grey-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">45.00 &euro; <del>56.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/jacket05.jpg" alt="">
+            <h3>Jacket</h3>
+            <h4>MEN Yarn Fleece Full-Zip Jacket</h4>
+          </div>
+          <div class="info2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star grey-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">58.00 &euro; <del>65.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/clothes03.jpg" alt="">
+            <h3>Skirt</h3>
+            <h4>Black Floral Wrap Midi Skirt</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">25.00 &euro; <del>35.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/watch03.jpg" alt="">
+            <h3>Pocket Watch</h3>
+            <h4>Pocket Watch Leather Pouch</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">100.00 &euro; <del>150.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/watch01.jpg" alt="">
+            <h3>Digital Watch</h3>
+            <h4>Smart watch Vital Plus</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">120.00 &euro; <del>180.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/tacons01.jpg" alt="">
+            <h3>Party wear shoes</h3>
+            <h4>Womens Party Wear Shoes</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">110.00 &euro; <del>170.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info-1">
+            <img src="./assets/images/productes/sports01.jpg" alt="">
+            <h3>Sport shoes</h3>
+            <h4>Running & Trekking Shoes - White</h4>
+          </div>
+          <div class="info-2">
+            <div class="showcase-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="  fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-box">
+              <p class="price">58.00 &euro; <del>89.00 &euro;</del> </p>
+              <button>Add</button>
+            </div>
+          </div>
+        </article> -->
+
+      </section>
+    </main>
+
+    <!-- Footer *************************-->
+    <footer>
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li>
+            <h2 class="nav-title">Categories</h2>
+          </li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Electronic</a></li>
+          <li><a href="#">Cosmetic</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Watches</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li>
+            <h2 class="nav-title">Products</h2>
+          </li>
+          <li><a href="#">Prices drop</a></li>
+          <li><a href="#">New products</a></li>
+          <li><a href="#">Best sales</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li>
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">Legal Notice</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li>
+            <h2 class="nav-title">Services</h2>
+          </li>
+          <li><a href="#">Prices drop</a></li>
+          <li><a href="#">New products</a></li>
+          <li><a href="#">Best sales</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-bottom">
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+        <p class="copyright">
+          Copyright &copy; Dress all rights reserved.
+        </p>
+      </section>
+    </footer>
+  </div>
+
+</body>
+
+</html>

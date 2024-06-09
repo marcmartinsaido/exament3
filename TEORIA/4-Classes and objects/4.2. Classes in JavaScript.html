@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+		
+		/*--------------------------------------------
+		* DEFINICIÓN DE CLASES
+		*--------------------------------------------*/
+		// Clase como modelo de libro
+		class Book {
+			constructor(pISBN, pTitle, pRelease, pSynopsis, pPrice) {
+				this.ISBN = pISBN;
+				this.title = pTitle;
+				this.release = pRelease;
+				this.sypnosis = pSynopsis;
+				this.price = pPrice;
+			}
+			aplicarOferta(pDescuento) {
+				if (pDescuento < this.price) {
+					this.price = this.price - pDescuento;
+				}
+			}
+			presentationBook() {
+				return 'The title book is :' + this.title;
+			}
+			static calculateIVA(pPrice) {
+				return pPrice * 0.21;
+			}
+		}
+
+		// Instaciamos/creamos un objeto book a partir de la clase
+		let objetoBook = new Book("897876879", "Materia oscura", 2010, "Descripción", 30.8);
+
+        // Utilizamos los objetos
+		console.log(objetoBook.title);
+		objetoBook.aplicarOferta(10);
+
+		/*--------------------------------------------
+		* USO DE MÉTODOS ESTÁTICOS
+		*--------------------------------------------*/
+		Book.calculateIVA(500);
+		console.log("Precio con oferta:" + objetoBook.price);
+
+
+		/*--------------------------------------------
+		* LISTAS DE OBJETOS
+		*--------------------------------------------*/
+		let listaBooks = [
+			objetoBook,
+			new Book("897878979", "Silencios vivos", 2016, "Descripción", 25.8),
+			new Book("897878345", "Invasión a la tierra", 2018, "Descripción", 15.9)
+		];
+
+		for (let b of listaBooks) {
+			console.log("datos libro:" + b.title + " precio:" + b.price);
+		}
+
+		/*--------------------------------------------
+		* HERENCIA DE CLASES
+		*--------------------------------------------*/
+		// Herència en javascript 
+		class Manga extends Book {
+
+			constructor(pISBN, pTitle, pRelease, pSynopsis, pPrice, pVolume) {
+				super(pISBN, pTitle, pRelease, pSynopsis, pPrice);
+				this.volume = pVolume;
+			}
+
+			printData() {
+				return `${this.title} - ${this.volume}`;
+			}
+		}
+
+		let mangaDragonBall = new Manga("78969797", "Dragon ball", 2000, "descripción", 40, 2);
+		
+        console.log("Título manga:" + mangaDragonBall.title);
+        mangaDragonBall.aplicarOferta(5);
+		console.log("Oferta manga:" + mangaDragonBall.price);
+		console.log("Datos manga:" + mangaDragonBall.printData());
+		console.log("Volumen manga:" + mangaDragonBall.volume);
+        
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

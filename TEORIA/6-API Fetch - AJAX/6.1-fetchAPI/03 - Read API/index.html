@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Read API</title>
+    <style media="screen">
+      /*
+          font-family: 'Chilanka', cursive;
+
+    font-family: 'Sansita Swashed', cursive;
+      
+      
+      */
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto auto auto auto;
+          padding: 10px;
+        }
+        .grid-item {
+          /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+          padding: 20px;
+          text-align: center;
+        }
+        .user-name{
+          font-family: 'Chilanka';
+          font-size:1.2rem;
+        }
+        .fa-user{
+          color:blue;
+          font-size:24px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container my-5 text-center">
+        <div class="row" >
+            <div class="col-md-6 my-2">
+                <button class="btn btn-danger w-100" onclick="obtenirDadesUsuari()">Obtenir un usuari</button>
+            </div>
+            <div class="col-md-6 my-2">
+              <button class="btn btn-danger w-100" onclick="obtenirLlistaUsuaris()">Obtenir llista usuari</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div id="content" class="mt-5 grid-container"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+        // Obtenir dades un uuari
+        function obtenirDadesUsuari() {
+            fetch("https://randomuser.me/api/?name=marta")
+            .then( (result) => result.json())
+            .then( (data) => {
+                console.log(data.results['0']);
+                let foto = data.results['0'].picture.large;
+                let name = data.results['0'].name.title + 
+                            data.results['0'].name.first +
+                           data.results['0'].name.last;
+                let content = document.querySelector('#content');
+                content.innerHTML = `
+                  <img src="${foto}" width="100px" class="img-fluid rounded-circle">
+                  <p>Nombre: ${name}</p>
+                `;
+
+            });
+        }
+
+        function obtenirLlistaUsuaris() {
+            // NO S'HA DE POSAR ; DESPRÉS DE FETCH
+            fetch("https://randomuser.me/api/?results=500")
+            .then(result => result.json())
+            .then(data => {
+                let content = document.querySelector('#content');
+                content.innerHTML = "";
+                for(let user of  data.results){
+                  content.innerHTML += `
+                    <div class="grid-item">
+                      <img src="${user.picture.large}" width="100px" class="img-fluid rounded-circle">
+                      <p class="user-name">
+                        <i class="fas fa-user"></i>
+                        Nombre: ${user.name.last}
+                      </p>
+                    </div>
+                  `;
+                }
+                
+            });
+        }
+
+ 
+
+    </script>
+
+
+</body>
+
+</html>

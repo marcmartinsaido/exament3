@@ -1,0 +1,52 @@
+{
+  "canciones": [
+    {
+      "id":1,
+      "titulo": "La Canción",
+      "artista": "Sebastián Romero",
+      "album": "Quimera",
+      "publicacion": "12-02-2021",
+      "duracion": "2:2"
+    },
+    {
+      "id":2,
+      "titulo": "Fuentes",
+      "artista": "Alex Ferrer",
+      "album": "Amorfina",
+      "publicacion": "01-02-2021",
+      "duracion": "4:3"
+    },
+    {
+      "id":3,
+      "titulo": "Amorfina",
+      "artista": "Marion",
+      "album": "La canción",
+      "publicacion": "10-01-2021",
+      "duracion": "3:6"
+    },
+    {
+      "id":4,
+      "titulo": "Gigarrillo y café",
+      "artista": "Josue Alaniz",
+      "album": "Quimera",
+      "publicacion": "11-01-2021",
+      "duracion": "3:2"
+    },
+    {
+      "id":5,
+      "titulo": "Quimera",
+      "artista": "Alba Reche",
+      "album": "Quimera",
+      "publicacion": "15-01-2021",
+      "duracion": "3:2"
+    },
+    {
+      "id":6,
+      "titulo": "Quimera para siempre",
+      "artista": "Alba Reche",
+      "album": "Quimera",
+      "publicacion": "15-01-2021",
+      "duracion": "3:5"
+    }
+  ]
+}

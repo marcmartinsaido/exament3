@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      /* Tota funció en JavaScript és un objecte Function!!!!! */
+
+
+      // Funcions pura: rep els parámetres d'entrada y retorna un resultat
+      /************************************************************************/
+      // Declaració de funció amb els seus paràmetes i arguments
+      function calcularMedia(num1, num2){
+        let result = (num1 + num2)/2;
+        return result;
+      }
+
+      // Funció anónima que es guardar a una constant
+      const  calcular = function(num1, num2) {
+          let result = (num1 + num2) / 2;
+          return result;
+      };
+			/*
+			let a = 5;
+			let b = 10
+			// Declaració de la funció del càlcul de la mitjana aritmètica de dos nombres
+			function calculaMitjana(a, b){
+				return (a+b/2);
+			}
+			*/
+
+      // Crida i execució de la funció
+      console.log( calcularMedia(4,6) );
+
+      // Funcions com objecte a una variable (Expressió de funció anònima)
+      /************************************************************************/
+      const calcularPreuFinal = function(preu, descompte){
+            return preu-descompte;
+      }
+
+      console.log( calcularPreuFinal(30, 5) );
+
+      let punts = [1,2,3,4,5];
+      punts.forEach(function(value, i){
+            punts[i]=value+5;
+      });
+      console.log("Array amb puntuacions modificades",punts);
+
+
+      /* Funcions 'arrow' (La expressió de funció fletxa)
+        Es poden definir de dues formes:
+            ([param] [, param]) => { instrucciones }
+            param => expresión
+      */
+      /************************************************************************/
+      punts.forEach(
+        (valor) => {
+						//alert(valor);
+            console.log("valor:"+ valor);
+        }
+      );
+
+      // Si només és un setencia o expressió
+      punts.forEach( (e,i) => punts[i]=e+3 );
+
+			var precio = 50;
+			if (precio<60){
+					alert("muy barato! compra ya!");
+      }
+      // o inclús sense parentesis si només necessitam accedir a un paràmetre
+      //punts.forEach( e => console.log(e) );
+
+      console.log("Dades array: "+punts);
+
+
+    // Funcions anidades
+    /************************************************************************/
+    function fora(x) {
+      // Funció interna només accessible a la funció fora
+       function dins(y) {
+          return x + y;
+       }
+       return dins(5);
+    }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

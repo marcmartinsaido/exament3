@@ -1,0 +1,91 @@
+{"video":{
+  "films":[
+         {"id":1,
+          "name":"Terminator",
+          "genre":"Action",
+          "director":"James Cameron",
+          "duration":"2h",
+          "cover":"terminator.jpg",
+          "price":"50€",
+          "sinopsis":"Los Ángeles, año 2029. Las máquinas dominan el mundo. Los rebeldes que luchan contra ellas tienen como líder a John Connor, un hombre que nació en los años ochenta. Para acabar con la rebelión, las máquinas deciden enviar al pasado a un robot -Terminator- cuya misión será eliminar a Sarah Connor, la madre de John, e impedir así su nacimiento.",
+          "stars":[
+            {"character":"Terminator", "name":"Arnold Schwarzenegger"},
+            {"character":"Constantin", "name":"Linda Hamilton"},
+            {"character":"Lorca", "name":"Michael Biehn"}
+            ]
+          },
+         {"id":2,
+          "name":"Alien",
+          "genre":"Sci-Fi",
+          "director":"Ridley Scott",
+          "duration":"2h",
+          "cover":"alien.jpg",
+          "price":"50€",
+          "sinopsis":"De regreso a la Tierra, la nave de carga Nostromo interrumpe su viaje y despierta a sus siete tripulantes. El ordenador central, MADRE, ha detectado la misteriosa transmisión de una forma de vida desconocida, procedente de un planeta cercano aparentemente deshabitado. La nave se dirige entonces al extraño planeta para investigar el origen de la comunicación.",
+          "stars":[
+            {"character":"Dallas", "name":"Tom Skerritt"},
+            {"character":"Ripley", "name":"Sigourney Weaver"},
+            {"character":"Lambert", "name":"Veronica Cartwright"}
+            ]
+          },
+          {"id":3,
+           "name":"Matrix",
+           "genre":"Action",
+           "director":"Lana Wachowski",
+           "duration":"2h 16min",
+           "cover":"matrix.jpg",
+           "price":"50€",
+           "sinopsis":"Thomas Anderson es un brillante programador de una respetable compañía de software. Pero fuera del trabajo es Neo, un hacker que un día recibe una misteriosa visita...",
+           "stars":[
+             {"character":"Neo", "name":"Keanu Reeves"},
+             {"character":"Morpheus", "name":"Laurence Fishburne"},
+             {"character":"Trinity", "name":"Carrie-Anne Moss"}
+             ]
+           }
+        ],
+  "series":[
+         {"id":4,
+          "name":"Chernobyl",
+          "genre":"Drama",
+          "director":"Craig Mazin",
+          "seasons":2,
+          "cover":"chernobyl.jpg",
+          "price":"50€",
+          "sinopsis":"undefined",
+          "stars":[
+            {"character":"Jessie", "name":"Jessie Buckley"},
+            {"character":"Constantin", "name":"Jared Harris"},
+            {"character":"Lorca", "name":"Stellan Skarsgard"}
+            ]
+          },
+         {"id":5,
+          "name":"Fariña",
+          "genre":"Crime",
+          "director":"Carlos Sedes",
+          "seasons":"2",
+          "cover":"farinya.jpg",
+          "price":"50€",
+          "sinopsis":"undefined",
+          "stars":[
+            {"character":"Sito Miñanco", "name":"Javier Rey"},
+            {"character":"Darío Castro", "name":"Tristán Ulloa"},
+            {"character":"Manuel Charlín", "name":"Antonio Durán"}
+            ]
+          },
+          {"id":6,
+           "name":"La casa de papel",
+           "genre":"Action",
+           "director":"Álex Pina",
+           "seasons":"3",
+           "cover":"lacasadepapel.jpg",
+           "price":"50€",
+           "sinopsis":"undefined",
+           "stars":[
+             {"character":"Tokio", "name":"Úrsula Corberó"},
+             {"character":"Raquel Murillo", "name":"Itziar Ituño"},
+             {"character":"El Profesor", "name":"Álvaro Morte"}
+             ]
+           }
+        ]
+   }
+}

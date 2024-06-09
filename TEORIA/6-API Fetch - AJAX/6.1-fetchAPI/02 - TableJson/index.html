@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+      <title>Fetch</title>
+  </head>
+  <body>
+      <div class="container my-5 text-center">
+          <button id="btn-users" class="btn btn-danger w-100"
+					onClick="getUsers()">Obtenir usuaris</button>
+          <div class="mt-5">
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Estado</th>
+                      </tr>
+                  </thead>
+                  <tbody id="contingut"></tbody>
+              </table>
+          </div>
+      </div>
+
+      <script>
+
+          // Assignar event al botó
+          //let buttonUsers = document.querySelector('#btn-users');
+          //buttonUsers.addEventListener("click", function(){ getUsers() });
+
+          // Modifica les dades de la taula amb els usuaris trobats al json
+          function printTable(pUsersList) {
+              let content = document.querySelector('#contingut');
+              content.innerHTML = ''
+              for(let user of pUsersList){
+                  console.log(user.nombre)
+                  content.innerHTML += `
+                  <tr>
+                      <th scope="row">${ user.id }</th>
+                      <td>${ user.nombre }</td>
+                      <td>${ user.email }</td>
+                      <td>${ user.estado ? "Activo" : "Eliminado" }</td>
+                  </tr>
+                  `
+              }
+          }
+
+          // Obtenir les dades de l'usuari
+          function getUsers() {
+              // Petició asíncrona amb "promises"
+              fetch('users.json')
+              .then(result => result.json())
+              .then( (data) => {
+                    // Actualitza les dades de la taula
+                    console.log(data);
+                    printTable(data);
+              });
+             
+          }
+
+      </script>
+  </body>
+</html>

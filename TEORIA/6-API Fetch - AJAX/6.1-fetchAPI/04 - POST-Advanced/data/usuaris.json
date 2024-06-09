@@ -1,0 +1,22 @@
+{
+	"users":[
+		{"id":1,
+		 "name":"Pedro",
+		 "surnames":"García",
+		 "mobile":"678456367",
+		 "email":"pgarcia@gmail.com",
+		 "access":{"username":"pgarcia", "password":"veo2019"},
+		 "type":"A"
+	 },
+		{"id":2,
+		 "name":"Joan",
+		 "surnames":"Gaya",
+		 "mobile":"678445389",
+		 "email":"jgaya@gmail.com",
+		 "access":{"username":"jgaya", "password":"veo2019"},
+		 "type":"O",
+		 "enable":"Y"
+		}
+	]
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="contenedorProductos"></div>
+
+    <script src="js/Producto.js"></script>  
+    <script>
+        let consola = new Producto(1, "Xbox one", "Consola de microsoft versión 2018", 200.5);
+        let television = new Producto(2, "TV LG plasma", "Televisión de leds de 45'", 649.5);
+        let lavadora = new Producto(3, "Lavadora Sansum", "Lavadora de 8kg con funciones avanzadas de secado", 530.9);
+
+        const listaProductos = [consola, television, lavadora];
+        const contenedor = document.querySelector('#contenedorProductos');
+
+        for (const pro of listaProductos) {
+            contenedor.innerHTML += pro.rederProducto();
+            contenedor.innerHTML += "Precio con IVA:" + pro.calcularPrecioConIVA();
+            contenedor.innerHTML += "<br>Precio para socios ORO: " + pro.calcularDescuentoSocio("ORO");
+            contenedor.innerHTML += "<br>Precio para socios PLATA: " + pro.calcularDescuentoSocio("PLATA");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: black;
+        }
+
+        main{
+            width:80vw;
+            background-color: black;
+        }
+        .characters{
+            display: flex;
+            justify-content: space-between;
+        }
+        #dialog{
+            min-height: 50px;
+            background-color: rgb(32, 32, 32);
+            padding: 10px;
+            text-align: center;
+        }
+        #dialog p{
+            color: white;
+        }
+
+        .names{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #per-1{
+            color:white
+        }
+        #per-2{
+            color:black
+        }
+
+        .characterOn{
+            filter:opacity(100%);
+        }
+        .characterOff{
+            filter:opacity(50%);
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="characters">
+                <div><img id="per-img-1" class="characterOn" src="img/per-1.png" alt=""/></div>
+                <div><img id="per-img-2" class="characterOff" src="img/per-2.png" alt=""/></div>
+        </div>
+
+
+        <div id="dialog">
+            <div class="names">
+                <div id="per-1">Miria</div>
+                <div id="per-2">Thorin</div>
+            </div>
+            <p>Lo vas a pagar caro</p>
+        </div>
+
+    </main>
+    
+    <script>
+        // Characters: Selfos
+        const dialogs = {
+            "dialogs":[{"Miria": "Lo vas a pagar caro"},
+                       {"Thorin": "¡No! porque tengo descuento"},
+                       {"Miria": "¿Pero es de MediaMarkt?"},
+                       {"Thorin": "¡No! es de Leroy Merlín"},
+                       {"Miria": "Entonces no te servirá contra mi poder"},
+                       {"Thorin": "Ya veremos, yo soy Thorin el rey de las ofertas"}
+                    ]
+            };
+
+
+        const text = document.querySelector('#dialog p');
+        const arrayDialogs = dialogs.dialogs; 
+        let isDialogMiria = true; 
+
+        function siguienteDialogo(arrayDialogs, index){
+            setTimeout(
+                ()=>{
+                    configureNames(isDialogMiria);
+                    configureCharacters(isDialogMiria);
+
+                    let newDialog = arrayDialogs[index];
+                    text.innerHTML = (isDialogMiria)?newDialog.Miria:newDialog.Thorin;
+
+                    //Flags
+                    isDialogMiria=!isDialogMiria;
+                    index++;
+                    if ( index<(arrayDialogs.length) )
+                        siguienteDialogo(arrayDialogs, index);
+                }, 3000);
+
+        }
+
+        siguienteDialogo(arrayDialogs, 0);
+
+
+        function configureNames(isDialogMiria){
+            const namePer1 = document.querySelector('#per-1');
+            const namePer2 = document.querySelector('#per-2');
+            namePer1.style.color =  isDialogMiria?"white":"transparent"; 
+            namePer2.style.color =  isDialogMiria?"transparent":"white"; 
+        }
+        
+        function configureCharacters(isDialogMiria){
+            const imgPer1 = document.querySelector('#per-img-1');
+            const imgPer2 = document.querySelector('#per-img-2');
+            imgPer1.className =  isDialogMiria?"characterOn":"characterOff"; 
+            imgPer2.className =  isDialogMiria?"characterOff":"characterOn"; 
+        }
+    </script>
+
+</body>
+</html>

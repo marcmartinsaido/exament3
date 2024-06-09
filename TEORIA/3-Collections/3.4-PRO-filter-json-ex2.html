@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			const data = [
+  {
+    name: 'Bob',
+    gender: 'male',
+    age: 34,
+  },
+  {
+    name: 'Carol',
+    gender: 'female',
+    age: 36,
+  },
+  {
+    name: 'Ted',
+    gender: 'male',
+    age: 38,
+  },
+  {
+    name: 'Alice',
+    gender: 'female',
+    age: 40,
+  },
+];
+
+const filterCombiner = (d, filterArray) => {
+  for (let fn of filterArray) {
+    if (!fn(d)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const filterArray1 = [
+  d => d.gender === 'female',
+];
+const arr1 = data.filter(d => filterCombiner(d, filterArray1));
+console.log('arr1', arr1);
+
+const filterArray2 = [
+  d => d.age > 37,
+];
+const arr2 = data.filter(d => filterCombiner(d, filterArray2));
+console.log('arr2', arr2);
+
+const filterArray3 = [
+  d => d.gender === 'female',
+  d => d.age > 37,
+];
+const arr3 = data.filter(d => filterCombiner(d, filterArray3));
+console.log('arr3', arr3);
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

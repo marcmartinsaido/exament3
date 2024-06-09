@@ -1,0 +1,133 @@
+[
+    {
+        "id": 1,
+        "name": "jacket",
+        "image": "./assets/images/productes/shoe01.jpg",
+        "description": "Running shoes with responsive cushioning",
+        "price": 48,
+        "puntuacion":1,
+        "discount": 50,
+        "category": "home"
+      },
+      {
+        "id": 2,
+        "name": "Shirt",
+        "image": "./assets/images/productes/shirt01.jpg",
+        "description": "Pure Garment Dyed Cotton Shirt",
+        "price": 45,
+        "puntuacion":2,
+        "discount": 56,
+        "category": "dona"
+      },
+      {
+        "id": 3,
+        "name": "Jacket",
+        "image": "./assets/images/productes/jacket05.jpg",
+        "description": "MEN Yarn Fleece Full-Zip Jacket",
+        "price": 58,
+        "puntuacion":4,
+        "discount": 80,
+        "category": "home"
+      },
+      {
+        "id": 4,
+        "name": "Skirt",
+        "image": "./assets/images/productes/clothes03.jpg",
+        "description": "Black Floral Wrap Midi Skirt",
+        "price": 25,
+        "puntuacion":2,
+        "discount": 0,
+        "category": "dona"
+      },
+      {
+        "id": 5,
+        "name": "Pocket Watch",
+        "image": "./assets/images/productes/watch03.jpg",
+        "description": "Pocket Watch Leather Pouch",
+        "price": 100,
+        "puntuacion":1,
+        "discount": 50,
+        "category": "accessoris"
+      },
+      {
+        "id": 6,
+        "name": "Digital Watch",
+        "image": "./assets/images/productes/watch01.jpg",
+        "description": "Smart watch Vital Plus",
+        "price": 120,
+        "puntuacion":5,
+        "discount": 18,
+        "category": "accessoris"
+      },
+      {
+        "id": 7,
+        "name": "Party wear shoes",
+        "image": "./assets/images/productes/tacons01.jpg",
+        "description": "Womens Party Wear Shoes",
+        "price": 110,
+        "puntuacion":2,
+        "discount": 17,
+        "category": "dona"
+      },
+      {
+        "id": 8,
+        "name": "Sport shoes",
+        "image": "./assets/images/productes/sports01.jpg",
+        "description": "Running & Trekking Shoes - White",
+        "price": 58,
+        "puntuacion":2,
+        "discount": 0,
+        "category": "home"
+      },
+      {
+        "id": 8,
+        "name":  " H Prenda 8",
+        "image": "./assets/images/productes/jacket03.jpg",
+        "description": "Descripcion hombre",
+        "price": 60,
+        "puntuacion":5,
+        "discount": 50,
+        "category": "home"
+      },
+      {
+        "id": 9,
+        "name":  " I Prenda 9",
+        "image": "./assets/images/productes/jacket04.jpg",
+        "description": "Descripcion hombre",
+        "price": 50,
+        "puntuacion":2,
+        "discount": 30,
+        "category": "home"
+      },
+      {
+        "id": 10,
+        "name":  " J Prenda 10",
+        "image": "./assets/images/productes/jewellery01.jpg",
+        "description": "Descripcion Accesorios",
+        "price": 80,
+        "puntuacion":3,
+        "discount": 50,
+        "category": "accessoris"
+      },
+      {
+        "id": 11,
+        "name":  " K Prenda 11",
+        "image": "./assets/images/productes/jacket06.jpg",
+        "description": "Descripcion mujer",
+        "price": 64,
+        "puntuacion":3,
+        "discount": 30,
+        "category": "dona"
+      },
+      {
+        "id": 12,
+        "name":  " L Prenda 12",
+        "image": "./assets/images/productes/shoe01.jpg",
+        "description": "Descripcion mujer",
+        "price": 30,
+        "puntuacion":1,
+        "discount": 0,
+        "category": "dona"
+      }
+]
+

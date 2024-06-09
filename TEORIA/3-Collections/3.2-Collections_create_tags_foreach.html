@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<body>
+	<h1>Notícies a partir d'un array (Matriu)</h1>
+	<div id="c-dades"></div>
+	<div id="c-dades-2"></div>
+
+	<script type="text/javascript">
+
+		// Array bidimensional o MATRIU
+		let noticiesArray = [
+			[1, "Brexit", "The end of the society..."],
+			[2, "Time", "The climate change..."],
+			[3, "Next generation", "Google is developing new generation..."]
+		];
+
+		// Array d'objectes
+		let noticiesObjects = [
+			{ "id": 1, "title": "Grafeno", "description": "news description..." },
+			{ "id": 2, "title": "Pixel 4", "description": "news description..." },
+			{ "id": 3, "title": "Next Generation", "description": "news description..." }
+		];
+
+
+		/*-----------------------------------------------------
+		Com recorrer una matriu?
+		-------------------------------------------------------*/
+		function mostrarDadesNoticies(element, index) {
+			console.log(element);
+			console.log(index);
+			let contenidor = document.getElementById("c-dades");
+			contenidor.innerHTML += `
+						<div style="background-color:#ddd">
+							<p>Títol:${element[1]}</p>
+							<p>Descripció:${element[2]}</p>
+						</div>
+				`;
+		}
+		noticiesArray.forEach(mostrarDadesNoticies);
+
+		/*-----------------------------------------------------
+		Com recorrer un vector d'objectes?
+		-------------------------------------------------------*/
+		let contenidorNoticiesObj = document.getElementById("c-dades-2");
+		contenidorNoticiesObj.innerHTML = "<h1>Notícies a partir d'un array d'objectes</h1>";
+		// Funció per imprimir cada notícia
+		function mostrarDadesNoticiesObj(element, index) {
+			console.log(element);
+			contenidorNoticiesObj.innerHTML += `
+						<div style="background-color:#ddd">
+							<p>${element.title}</p>
+						</div>
+				`;
+		}
+		noticiesObjects.forEach(mostrarDadesNoticiesObj);
+
+	</script>
+</body>
+
+</html>

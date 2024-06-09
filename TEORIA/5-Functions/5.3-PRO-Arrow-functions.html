@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    /*
+        https://www.w3schools.com/js/js_arrow_function.asp
+    */
+
+    // Arrow function a partir d'una constant
+    const calcular = (num1, num2) => {
+      let result = (num1 + num2) / 2;
+      return result;
+    };
+    console.log("Resultado", calcular(5, 10));
+
+
+    const aProducts = ["Television", "Phone", "Computer"];
+    const product = aProducts.find(
+      (item) => {
+        return item == "Computer";
+      }
+    );
+    console.log(product);
+
+    /* Quan hi ha només un paràmetre i només una condició totes 
+      aquestes opcions són iguals*/
+    const produts2 = aProducts.find((item) => item == "Television");
+    const produts3 = aProducts.find(item => item == "Television");
+
+  </script>
+</body>
+
+</html>

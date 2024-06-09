@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pedro",
+        "email": "pedro@mstar.es",
+        "estado": false
+    },
+    {
+        "id": 2,
+        "nombre": "Elena",
+        "email": "elena@mstar.es",
+        "estado": false
+    },
+    {
+        "id": 3,
+        "nombre": "Juan",
+        "email": "juan@gmail.com",
+        "estado": true
+    },
+    {
+        "id": 4,
+        "nombre": "Sara",
+        "email": "sara@gmail.com",
+        "estado": true
+    }
+]
